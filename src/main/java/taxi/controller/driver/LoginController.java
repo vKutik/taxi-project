@@ -15,22 +15,22 @@ import taxi.service.AuthenticationService;
 
 @WebServlet(urlPatterns = "/login")
 public class LoginController extends HttpServlet {
+    private static final Logger log = LogManager.getLogger(CarDaoImpl.class);
     private static final String DRIVERS_ID = "driver_id";
     private static final Injector injector = Injector.getInstance("taxi");
     private final AuthenticationService authenticationService =
             (AuthenticationService) injector.getInstance(AuthenticationService.class);
-    private static final Logger log = LogManager.getLogger(CarDaoImpl.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
+                throws ServletException, IOException {
         log.debug("doGet login");
         req.getRequestDispatcher("/WEB-INF/views/drivers/login.jsp").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
-            throws IOException, ServletException {
+                throws IOException, ServletException {
         log.debug("doPost login");
         String login = req.getParameter("login");
         String password = req.getParameter("password");
