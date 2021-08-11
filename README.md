@@ -42,13 +42,13 @@ Architecture consists of 3 layers
     * configure Tomcat
 
 2. MySQL
-    * run script from _resource/init_db.sql file_ to get all tables
+    * Run script from _resources/init_db.sql file_ to get all tables.
     * In _/util/ConnectionUtil.java_, change the **URL**, **MYSQL_DRIVER**, **USERNAME** and **PASSWORD** properties to those
       which you specified when installing MySQL.
 
-3. change absolute path to file logger
+3. Сhange absolute path to logging file in `resources/log4j2.xml`.
    
-4. After starting tomcat, go to _http://localhost:[your port]_ that you specified when configuring Tomcat,
+4. After starting tomcat, go to _http://localhost:[port]_ that you specified when configuring Tomcat,
   click "Register",
   to add a new driver.
    

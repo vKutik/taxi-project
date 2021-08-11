@@ -6,14 +6,13 @@ import java.sql.SQLException;
 import java.util.Properties;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import taxi.dao.impl.CarDaoImpl;
 
 public class ConnectionUtil {
     public static final String URL = "jdbc:mysql://remotemysql.com:3306/YjHJrupVFh";
     public static final String USERNAME = "YjHJrupVFh";
     public static final String PASSWORD = "ykAkxAT1Ii";
     public static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-    private static final Logger log = LogManager.getLogger(CarDaoImpl.class);
+    private static final Logger log = LogManager.getLogger(ConnectionUtil.class);
 
     static {
         try {
